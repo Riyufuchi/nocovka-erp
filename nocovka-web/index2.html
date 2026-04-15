@@ -1,0 +1,70 @@
+﻿<!DOCTYPE html>
+<html lang='cs'>
+<head>
+	<title>Riyufuchin web</title>
+	<meta charset='utf-8'>
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<meta name="description" content="Riyufuchin osobní web, který slouží také jako experimentální projekt s ASP .NET Core.">
+	<meta name="keywords" content="C++, C#, .NET Core">
+    <meta name="author" content="Riyufuchi">
+    <meta name="copyright" content="© 2025 - 2026 Riyufuchi. All rights reserved.">
+	<meta name="robots" content="index, follow">
+	
+	<link rel="icon" href="pictures/logos/logo.png">
+	<link href="sivo/css/base/sivo_base.css" rel="stylesheet" type="text/css">
+	<link href="sivo/css/base/sivo_custom.css" rel="stylesheet" type="text/css">
+	<link href="sivo/css/slideshow/slideshow.css" rel="stylesheet" type="text/css">
+	<link href="sivo/css/base/sivo_header_nav.css" rel="stylesheet" type="text/css">
+	<link href="sivo/css/visualEffects/specialSection.css" rel="stylesheet" type="text/css">
+	<link href="sivo/css/visualEffects/effects.css" rel="stylesheet" type="text/css">
+	<link href="sivo/css/visualEffects/lines.css" rel="stylesheet" type="text/css">
+	<link href="sivo/css/interactive/job_menu.css" rel="stylesheet" type="text/css">
+	<link href="sivo/css/interactive/pageTabs.css" rel="stylesheet" type="text/css">
+
+    <link href="sivo/css/interactive/basic_form.css" rel="stylesheet" type="text/css">
+
+	<script src="sivo/js/sivo_header_nav_scripts.js"></script>
+	<script src="sivo/js/menu_bar.js"></script>
+    <script src="sivo/js/job_form.js"></script>
+	<script>
+		window.onload=function()
+		{
+			footer();
+		}
+	</script>
+</head>
+<body style="background-image: url('pictures/backgrounds/AsteroidOuterSpace.png');">
+	<header class="sivoStaticHeader" id="navbar">
+		<div class="sivoHeaderContainer">
+			<a href="index.html" class="sivoHeaderLogo"><img class="sivoHeaderLogo" src="pictures/logos/logo.png" alt="company logo"></a>
+		</div>
+	</header>
+	<main>
+        <section>
+			<h1 class="whatIdoHeader" id="contact-form">Pracovní report</h1>
+            <form class="modernArticle container" id="form01">
+                <table class="form-formater">
+                    <tr>
+                        <td><label for="emp-id">ID:</label></td>
+                        <td><input type="text" id="emp-id" name="emp-id" class="txtFld"></td>
+                    </tr>
+                    <tr>
+                        <td><label for="job-id">Zakázka ID:</label></td>
+                        <td><input type="text" id="job-id" name="job-id" class="txtFld"></td>
+                    </tr>
+                    <tr>
+                        <td><label for="msg">Zpráva:</label></td>
+                        <td><textarea id="msg" name="msg" rows="5"></textarea></td>
+                    </tr>
+                    <tr>
+                        <td colspan="2"><input type="submit" value="Odeslat" class="sendButton" onclick="prepareFormDownload('form01');"></td>
+                    </tr>
+                </table>
+            </form>
+        </section>
+	</main>
+	<footer id="footer">
+		<!-- links are added via javascript -->
+	</footer>
+</body>
+</html>

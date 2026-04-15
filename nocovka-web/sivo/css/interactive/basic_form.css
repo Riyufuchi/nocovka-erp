@@ -1,0 +1,72 @@
+@charset "UTF-8";
+form
+{
+	text-align: left;
+	padding: 8px;
+	font-size: var(--standard-text-font-size);
+}
+input[type=password], input[type=text], select, textarea 
+{
+	width: 75%;
+	padding: 12px 20px;
+    margin-top: 16px;
+	font-size: var(--standard-text-font-size);
+
+    border: 4px solid #3d3d5c;
+	border-radius: 6px;
+	background-color: #333333;
+	color: #eaeaea;
+
+	display: inline-block;
+	box-sizing: border-box;
+}
+label
+{
+	min-width: 24%;
+    max-width: 24%;
+	font-size: var(--standard-text-font-size);
+	font-weight: bold;
+}
+select
+{
+    font-weight: bold;
+}
+.sendButton
+{
+	-webkit-appearance: none;
+	appearance: none;
+    width: 256px;
+    height: auto;
+    margin-top: 16px;
+	margin-bottom: 16px;
+	background-color: var(--body-backgroud-color);
+	color: white; /*var(--body-backgroud-color);*/
+	border-radius: 15px 15px 15px 15px;
+	border: 5px solid white;
+    font-size: var(--standard-text-font-size);
+}
+.sendButton:hover
+{
+    border: 5px solid var(--a-hover-color);
+	color: var(--a-hover-color);
+}
+.form-formater
+{
+    width: 80%;
+}
+@media only screen and (orientation: portrait)
+{
+	form
+	{
+		width: auto;
+		margin: auto;
+	}
+    input[type=password], input[type=text], select, textarea 
+    {
+        font-size: var(--mobile-text-font-size);
+    }
+    .form-formater
+    {
+        width: 100%;
+    }
+}

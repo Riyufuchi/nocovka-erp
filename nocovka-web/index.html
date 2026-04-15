@@ -1,0 +1,203 @@
+﻿<!DOCTYPE html>
+<html lang='cs'>
+<head>
+	<title>Riyufuchin web</title>
+	<meta charset='utf-8'>
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<meta name="description" content="Riyufuchin osobní web, který slouží také jako experimentální projekt s ASP .NET Core.">
+	<meta name="keywords" content="C++, C#, .NET Core">
+    <meta name="author" content="Riyufuchi">
+    <meta name="copyright" content="© 2025 - 2026 Riyufuchi. All rights reserved.">
+	<meta name="robots" content="index, follow">
+	
+	<link rel="icon" href="pictures/logos/logo.png">
+	<link href="sivo/css/base/sivo_base.css" rel="stylesheet" type="text/css">
+	<link href="sivo/css/base/sivo_custom.css" rel="stylesheet" type="text/css">
+	<link href="sivo/css/slideshow/slideshow.css" rel="stylesheet" type="text/css">
+	<link href="sivo/css/base/sivo_header_nav.css" rel="stylesheet" type="text/css">
+	<link href="sivo/css/visualEffects/specialSection.css" rel="stylesheet" type="text/css">
+	<link href="sivo/css/visualEffects/effects.css" rel="stylesheet" type="text/css">
+	<link href="sivo/css/visualEffects/lines.css" rel="stylesheet" type="text/css">
+	<link href="sivo/css/interactive/job_menu.css" rel="stylesheet" type="text/css">
+	<link href="sivo/css/interactive/pageTabs.css" rel="stylesheet" type="text/css">
+
+    <link href="sivo/css/interactive/basic_form.css" rel="stylesheet" type="text/css">
+
+	<script src="sivo/js/sivo_header_nav_scripts.js"></script>
+	<script src="sivo/js/menu_bar.js"></script>
+    <script src="sivo/js/formExample01.js"></script>
+	<script>
+		window.onload=function()
+		{
+			createMenu();
+		}
+		window.onorientationchange = function()
+		{
+            closeMenu();
+		}
+	</script>
+</head>
+<body style="background-image: url('pictures/backgrounds/AsteroidOuterSpace.png');">
+	<header class="sivoStaticHeader" id="navbar">
+		<div class="sivoHeaderContainer">
+			<a href="index.html" class="sivoHeaderLogo"><img class="sivoHeaderLogo" src="pictures/logos/logo.png" alt="company logo"></a>
+			<a href="javascript:void(0);" class="sivoHeaderMenuButton" onclick="showStaticMenu()">≡</a>
+		</div>
+	</header>
+	<nav class="sivoStaticHeaderMenuContainer" id="sivoLinks">
+	</nav>
+	<main>
+		<div class="section">
+			<div class="simitrut-leftLine"></div>
+			<article class="simitrut-mainArticle">
+				<h2 class="simitrut-title"><b>Vítejte</b>, já jsem Riyufuchi</h2>
+                <p>
+                    Zabývám se vývojem softwaru v C++ a v C#. Občas si hraju s IoT a webovými aplikacemi.
+                </p>
+			</article>
+		</div>
+		<div class="section" id="aboutme">
+		  <article class="modernArticle">
+            <h2>Něco o mě</h2>
+            <ul>
+                <li><strong>Oblíbené programovací jazyky:</strong> C/C++ a C#</li>
+                <li><strong>Oblíbená linuxová distribuce:</strong> Ubuntu</li>
+                <li><strong>Oblíbená IDE:</strong> Qt Creator a Visual Studio Code</li>
+            </ul>
+            <blockquote>
+                Only the people who are crazy enough to think they can change the world
+                are the ones who do.
+                <footer>— Steve Jobs</footer>
+            </blockquote>
+		  </article>
+		</div>
+		<section>
+			<h1 class="whatIdoHeader" id="what_i_do_id">Čím se zabývám</h1>
+			<div class="container">
+				<div class="jobButton" onclick="buttonClick(2)">
+					<div class="app"></div>
+					<div class="jobButtonText">Vývoj softwaru</div>
+				</div>
+                <div class="jobButton" onclick="buttonClick(1)">
+					<div class="other"></div>
+					<div class="jobButtonText">IoT</div>
+				</div>
+				<div class="jobButton" onclick="buttonClick(3)">
+					<div class="webapp"></div>
+					<div class="jobButtonText">Webové aplikace</div>
+				</div>
+			</div>
+			<script>
+				function buttonClick(id)
+				{
+					switch(id)
+					{
+						case 1: window.location.href = "#iot_article"; break;
+						case 2: window.location.href = "#cpp_application_dev_article"; break;
+						case 3: window.location.href = "#other_tech"; break;
+						default: alert("Button ID error"); break;
+					}
+				}
+ 			</script>
+			<!-- -->
+            <article class="modernArticle" id="cpp_application_dev_article">
+                <h2>Vývoj softwaru</h2>
+                <h3>C / C++</h3>
+                    <p>
+                        Vyvýjím především v C++ 17/20 na Linuxu, ale snažím se aby mé aplikace byly cross-platformní (Linux a Windows).
+                        Pro kompilaci a sestavení projektu používám CMake a pro psaní dokumentace používám sázecí systém LaTeX.
+                    </p>
+                <h4>Grafické aplikace</h4>
+                    <p>
+                        Pro vývoj grafických aplikací v C++ používám <a href="https://github.com/Riyufuchi/imagine">Qt 6</a> a SFML pro jednoduché hry.
+                    </p>
+                <h4>Aplikace pro příkazovou rádku</h4>
+                    <p>
+                        Vytvořila jsem knihovnu <a href="https://github.com/Riyufuchi/ConsoleLib">ConsoleLib</a>, která poskytuje cross-platformní nástoje pro práci s konzolovou řádkou a tato knihovna je plně využita v projektu <a href="https://github.com/Riyufuchi/ConsoleArt">ConsoleArt</a>.
+                    </p>
+                <h4>Citát na závěr</h4>
+                <blockquote>
+                    C makes it easy to shoot yourself in the foot; C++ makes it harder, but when you do it blows your whole leg off.
+                    <footer>— Bjarne Stroustrup</footer>
+                </blockquote>
+
+                <h2>C#</h2>
+                <h3>Grafické aplikace</h3>
+                    <p>
+                        Pro vývoj grafických aplikací v C# používám WPF.
+                    </p>
+                <br>
+            </article>
+			<!-- -->
+            <article class="modernArticle" id="iot_article">
+                <h2>IoT</h2>
+                <h3>Arduino</h3>
+                    <p>
+                        Arduino programuji v <a href="https://github.com/Riyufuchi/environment-monitor-core">C/C++ bez použití Arduino.h</a> takže nastavuji piny přímo přes registery, bez použití Arduino knihoven.
+                    </p>
+                <br>
+                <h3>Citát na závěr</h3>
+                <blockquote>
+                    Unlike transient applications, embedded systems persist as physical artifacts — devices that once sensed and responded to their environment.
+                    <footer>— Riyufuchi</footer>
+                </blockquote>
+            </article>
+			<article class="modernArticle" id="other_tech">
+                <h2>Webové aplikace</h2>
+                <h3>ASP .NET Core</h3>
+                    <p>Věnuji se ve volném čase také vývoji webových aplikací v APS .NET Core a tato stránka poslouží jako frontend pro jednu mojí experimentální aplikaci.</p>
+                <br>
+                </article>
+		</section>
+        <section>
+			<h1 class="whatIdoHeader" id="contact-form">Kontakt</h1>
+            <form class="modernArticle container" id="form01">
+                <table class="form-formater">
+                    <tr>
+                        <td><label for="email">Email:</label></td>
+                        <td><input type="text" id="email" name="email" class="txtFld"></td>
+                    </tr>
+                    <tr>
+                        <td><label for="jobType">Typ práce:</label></td>
+                        <td><select name="jobType" id="jobType">
+                                <option value="Elektrikářké">Čištění počítače</option>
+                                <option value="Projekční/stavební">Instalace / Reinstalace OS</option>
+                                <option value="Jiné">Jiné</option>
+                             </select>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td><label for="msg">Zpráva:</label></td>
+                        <td><textarea id="msg" name="msg" rows="5"></textarea></td>
+                    </tr>
+                    <tr>
+                        <td colspan="2"><input type="submit" value="Odeslat" class="sendButton" onclick="prepareFormDownload('form01'); alert('Připraveno pro ASP .NET Core verzi');"></td>
+                    </tr>
+                </table>
+            </form>
+        </section>
+		<div class="section" id="contact">
+			<article class="simitrut-contactArticle">
+				<h2 class="simitrut-contactTitle">Mé sociální sítě</h2>
+				<div class="simitrut-paragraph">
+					<table>
+						<tr>
+							<th>GitHub:</th>
+							<td><a href="https://github.com/Riyufuchi">https://github.com/Riyufuchi</a></td>
+						</tr>
+						<tr>
+							<th>Ko-Fi:</th>
+							<td><a href="https://ko-fi.com/riyufuchi">https://ko-fi.com/riyufuchi</a></td>
+						</tr>
+					</table>
+				</div>
+			</article>
+			<div class="simitrut-rightHorizontalLine"></div>
+			<div class="simitrut-rightVerticalLine"></div>
+		</div>
+	</main>
+	<footer id="footer">
+		<!-- links are added via javascript -->
+	</footer>
+</body>
+</html>
