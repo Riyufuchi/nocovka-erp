@@ -17,13 +17,16 @@
    <layout class="QGridLayout" name="gridLayout">
     <item row="0" column="0">
      <widget class="QTabWidget" name="tabWidget">
+      <property name="currentIndex">
+       <number>0</number>
+      </property>
       <widget class="QWidget" name="tab">
        <attribute name="title">
-        <string>Tab 1</string>
+        <string>Items</string>
        </attribute>
        <layout class="QGridLayout" name="gridLayout_2">
         <item row="0" column="0">
-         <widget class="QTableView" name="tableView"/>
+         <widget class="QTableView" name="db_view"/>
         </item>
        </layout>
       </widget>
@@ -31,6 +34,11 @@
        <attribute name="title">
         <string>Tab 2</string>
        </attribute>
+       <layout class="QGridLayout" name="gridLayout_3">
+        <item row="0" column="0">
+         <widget class="QTableView" name="tableView"/>
+        </item>
+       </layout>
       </widget>
      </widget>
     </item>

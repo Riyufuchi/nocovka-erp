@@ -8,6 +8,8 @@
 #define MAIN_WINDOW_H
 
 #include <QMainWindow>
+// Nocovka
+#include "src/controller.h"
 
 QT_BEGIN_NAMESPACE
 namespace Ui { class MainWindow; }
@@ -16,6 +18,10 @@ QT_END_NAMESPACE
 class MainWindow : public QMainWindow
 {
 	Q_OBJECT
+
+private:
+	nocovka::Controller controller;
+	QSqlTableModel* model;
 
 public:
 	MainWindow(QWidget *parent = nullptr);

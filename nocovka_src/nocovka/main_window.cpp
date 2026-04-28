@@ -5,19 +5,17 @@
 // Copyright  : Copyright (c) 2026, riyufuchi
 //==============================================================================
 #include "main_window.h"
-#include "./ui_main_window.h"
-
-#include <QFileDialog>
-#include <QFile>
-#include <QJsonDocument>
-#include <QJsonObject>
-#include <QStandardItemModel>
+#include "ui_main_window.h"
 
 MainWindow::MainWindow(QWidget *parent)
 	: QMainWindow(parent)
 	, ui(new Ui::MainWindow)
 {
 	ui->setupUi(this);
+	this->model = controller.obtain_model("ITEMS", this);
+	ui->db_view->setModel(model);
+	ui->db_view->setEditTriggers(QAbstractItemView::NoEditTriggers);
+	ui->db_view->hideColumn(0);
 }
 
 MainWindow::~MainWindow()
@@ -34,29 +32,15 @@ void MainWindow::on_actionExit_triggered()
 
 void MainWindow::on_actionImport_triggered()
 {
-	QString fileName = QFileDialog::getOpenFileName(
-		this,
-		"Open JSON",
-		"",
-		"JSON Files (*.json)"
-	);
+	controller.import_from_json_to_db(this);
+	model->refresh();
 
-	if (fileName.isEmpty())
+	/*nocovka::QJsonOptional doc_opt = nocovka::import_json(this);
+
+	if (!doc_opt && !((*doc_opt).isObject()))
 		return;
 
-	QFile file(fileName);
-	if (!file.open(QIODevice::ReadOnly))
-		return;
-
-	QByteArray data = file.readAll();
-	file.close();
-
-	QJsonDocument doc = QJsonDocument::fromJson(data);
-
-	if (!doc.isObject())
-		return;
-
-	QJsonObject obj = doc.object();
+	QJsonObject obj = doc_opt.value().object();
 
 	QStandardItemModel *model = new QStandardItemModel(this);
 
@@ -78,6 +62,6 @@ void MainWindow::on_actionImport_triggered()
 
 	model->appendRow(row);
 
-	ui->tableView->setModel(model);
+	ui->tableView->setModel(model);*/
 }
 
